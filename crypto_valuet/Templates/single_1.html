@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ com.title }}{% endblock %}
+
+{% block content %}
+{% load static %}
+{% block stili %}<link rel="stylesheet" href="{% static 'crypto_coin/css/st.css' %}">{% endblock %}
+
+<br>
+<div class="container">
+  <div class="card">
+    <div class="card-body">
+     <div class="container">
+      <div class="c_1">
+        <img src="/media/products/coins/BTC.jpg" alt="Product Image" width="1200">
+      </div>
+     </div>
+      <h2 class="card-title text-center text-warning fw-bold">{{ com.title }}</h2>
+      <h5 class="text-center">{{ com.code_coins }}</h5>
+      <p class="card-text text-center">{{ com.build_company }}</p>
+      <p class="text-center">{{ com.since }}</p>
+      <div class="text-center">
+        <a href="https://www.binance.com/en/trade/NOT_USDT" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+          Buy NOT
+        </a>
+        
+      </div>
+    </div>
+    <div class="card-footer text-muted">
+    </div>
+  </div>
+</div>
+{% endblock %}

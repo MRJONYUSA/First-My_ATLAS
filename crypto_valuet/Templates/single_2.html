@@ -1,0 +1,23 @@
+{% extends 'base.html'%}
+
+{%block title%} {{PHCOIN.title}} {% endblock %}
+
+{% block content %}
+<br>
+<div class="container">
+  <div class="card">
+    <div class="card-body">
+      <h2 class="card-title text-center text-danger fw-bold">{{ PHCOIN.title }}</h2>
+      <h5 class="text-center">{{ PHCOIN.code_coins }}</h5>
+      <p class="card-text text-center">{{PHCOIN.build_company }}</p>
+      <p class="text-center">{{ PHCOIN.since }}</p>
+      <p class="text-center">{{PHCOIN.blockcheyn }}</p>
+      <div class="text-center">
+        <a href="#" class="btn btn-primary">Buy {{PHCOIN.blockcheyn}}</a>
+      </div>
+    </div>
+    <div class="card-footer text-muted">
+    </div>
+  </div>
+</div>
+{% endblock %}

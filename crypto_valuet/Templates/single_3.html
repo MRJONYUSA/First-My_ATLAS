@@ -1,0 +1,22 @@
+{% extends 'base.html'%}
+
+{%block title%} {{CURCOIN.title}} {% endblock %}
+
+{% block content %}
+<br>
+<div class="container">
+  <div class="card">
+    <div class="card-body">
+      <h2 class="card-title text-center text-primary fw-bold">{{CURCOIN.title }}</h2>
+      <h5 class="text-center">{{CURCOIN.code_coins }}</h5>
+      <p class="card-text text-center">{{CURCOIN.build_company }}</p>
+      <p class="text-center">{{CURCOIN.since }}</p>
+      <div class="text-center">
+        <a href="#" class="btn btn-primary">Buy {{CURCOIN.blockcheyn}}</a>
+      </div>
+    </div>
+    <div class="card-footer text-muted">
+    </div>
+  </div>
+</div>
+{% endblock %}

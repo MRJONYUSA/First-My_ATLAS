@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="table-responsive mt-5">
+    <table class="table table-bordered table-striped table-hover">
+        <thead class="table-dark">
+            <tr>
+                
+                <th>CryptoCoins</th>
+                <th>More</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for coin in CR_2 %}
+            <tr>
+                <td>{{ coin.title }}</td>
+                <td>
+                    <a href="{% url 'single_1' coin.id %}">
+                        <button class="btn btn-outline-dark">INFO</button>
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}
+
+            {% for coin_2 in PH_2 %}
+            <tr>
+                <td>{{ coin_2.title }}</td>
+                <td>
+                    <a href="{% url 'single_2' coin_2.id %}">
+                        <button class="btn btn-outline-dark">INFO</button>
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}
+
+            {% for coin_3 in CU_3 %}
+            <tr>
+                <td>{{ coin_3.title }}</td>
+                <td>
+                    <a href="{% url 'single_3' coin_3.id %}">
+                        <button class="btn btn-outline-dark">INFO</button>
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

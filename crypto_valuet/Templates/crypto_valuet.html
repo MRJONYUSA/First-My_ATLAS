@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+{% block stili %}<link rel="stylesheet" href="{% static 'crypto_coin/css/crypto_v.css' %}">{% endblock %}
+
+    <table class="table mt-5 table-bordered table-striped tebale-hover ">
+        <thead class="table-danger">
+            <tr>
+                <th>CryptoCoins</th>
+                <th>Information</th>
+            </tr>
+        </thead>
+        <tbody>
+            <div>
+            <tr>
+                {% for coin in crcoins %}
+    
+                <td>{{coin.title }}</td>
+                <td>
+                    <a href="classs.html"><button class="btn btn-outline-dark">INFO</button></a>
+                </td>
+    
+                {% endfor %}
+            </tr>
+            </div>
+            <div>
+                <tr>
+                {% for coin_2 in physiccoins %}
+                  {% if coin_2.title != "Gas" %}
+                  
+                    <td>{{ coin_2.title }}</td>
+                    <td>
+                        <a href=""> <button class="btn btn-outline-dark">INFO</button></a>
+                    </td>
+                    </tr>
+                {% endif %}
+                 {% endfor %}
+
+            </div>
+               <tr>
+                {% for coin_3 in currensycoin %}
+    
+                <td>{{coin_3.title}}</td>
+                <td>
+                    <a href=> <button class="btn btn-outline-dark">INFO</button></a>
+                </td>
+                {% endfor %}
+            </tr>
+            </div>
+        </tbody>
+        {% endblock %}
